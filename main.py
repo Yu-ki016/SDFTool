@@ -6,7 +6,7 @@ import cv2
 
 import numpy as np
 
-from PySide6.QtCore import *
+from PySide6.QtCore import QObject, Slot
 from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtWidgets import QFileDialog, QApplication
 
