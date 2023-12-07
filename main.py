@@ -10,10 +10,14 @@ from PySide6.QtCore import QObject, Slot
 from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtWidgets import QFileDialog, QApplication
 
+base_dir = os.path.dirname(os.path.realpath(sys.argv[0]))
+if os.path.exists(base_dir + "/dll"):
+    os.add_dll_directory(base_dir + "/dll")
+
 # import QtQuick
 sys.path.append("Cpp_Core/x64/Release")
-os.add_dll_directory(r"E:\Material\code\C++\OpenCV\opencv\build\x64\vc16\bin")
 import SDF_Cpp
+
 
 
 class SDFLib:
